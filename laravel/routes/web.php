@@ -14,13 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/about', function () {
+    return view('about', [
+        "name" => "Sholahuddin Alfatah",
+        "email" => "alfatah1505@gmail.com",
+        "image" => "alfatah.jpg"
+    ]);
 });
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/blog', function () {
+    return view('posts');
 });
