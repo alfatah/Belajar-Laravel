@@ -21,21 +21,14 @@ class post
 
   public static function all()
   {
-    return self::$blog_posts;
+    return collect(self::$blog_posts);
   }
 
 
   public static function find($slug)
   {
-    $posts = self::$blog_posts;
-    $post = [];
-    foreach($posts as $p) {
-        if($p["slug"] === $slug) {
-            $post = $p;
-            }
-        }
-
-    return $post;
+    $posts = static::all();
+    return $posts->firstWhere('slug', $slug);
     }
 
 }
