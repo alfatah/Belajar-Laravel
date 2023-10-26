@@ -11,10 +11,9 @@
         </h2>
             <p>By. Sholahuddin Alfatah in  <a href="/categories/{{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></p>
 
-        <h5>{{ $post->author }}</h5>
         <p>{!! $post->excerpt !!}</p>
 
-        <a href="/posts/{{ $post->slug }}">Read More..</a>
+        <a href="/posts/{{ $post->slug }}">Read more..</a>
 
 
     </article>

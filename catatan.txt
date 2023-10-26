@@ -2,5 +2,5 @@
 = Watching Last Videos :
 = 09.Belajar Laravel 8 - 9. Database Seeder
 ================================================
-= Minute to : 06:09
+= Minute to : 08:43
 ================================================
