@@ -13,7 +13,7 @@
 
         <p>{!! $post->excerpt !!}</p>
 
-        <a href="/posts/{{ $post->slug }}">Read more..</a>
+        <a class="text-decoration-none" href="/posts/{{ $post->slug }}">Read more..</a>
 
 
     </article>
