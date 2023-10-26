@@ -5,7 +5,7 @@
 
     <h1 class="mb-5">{{ $post->title }}</h1>
 
-    <p>By. Sholahuddin Alfatah in  <a class="text-decoration-none" href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
+    <p>By. <a class="text-decoration-none" href="#">{{ $post->user->name }}</a><a href="/categories/{{ $post->category->slug }}" class="text-decoration-none"></a> in  <a class="text-decoration-none" href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
 
     {!! $post->body !!}
     <br>
