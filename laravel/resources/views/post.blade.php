@@ -5,11 +5,11 @@
 
     <h1 class="mb-5">{{ $post->title }}</h1>
 
-    <p>By. Sholahuddin Alfatah in  <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
+    <p>By. Sholahuddin Alfatah in  <a class="text-decoration-none" href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></p>
 
     {!! $post->body !!}
-
-    <a href="/posts">Back to Posts</a>
+    <br>
+    <a href="/posts" class="text-decoration-none">Back to Posts</a>
 
     @endsection
 
