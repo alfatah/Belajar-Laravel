@@ -8,7 +8,8 @@
         <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <h3 class="card-title">{{ $posts[0]->title }}</h3>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p>By. <a class="text-decoration-none" href="/authors/{{ $posts[0]->author->username }}">{{ $posts[0]->author->name }}</a> in  <a href="/categories/{{ $posts[0]->category->slug }}" class="text-decoration-none">{{ $posts[0]->category->name }}</a></p>
+          <p class="card-text">{{ $posts[0]->excerpt }}</p>
           <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>
       </div>
