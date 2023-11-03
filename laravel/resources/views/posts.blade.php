@@ -4,6 +4,7 @@
 
 @if ($posts->count())
 
+<h1 class="mb-5">{{ $title }}</h1>
     <div class="card mb-3">
         <img src="https://source.unsplash.com/random/{{ $posts[0]->category->name }}" style="width:1100;height:600px;" class="card-img-top" alt="{{ $posts[0]->category->name }}">
         <div class="card-body text-center">
@@ -26,6 +27,7 @@
       <p class="text-center fs-4">No post found.</p>
 
 @endif
+
 
       <div class="container">
         <div class="row">
@@ -50,23 +52,6 @@
         @endforeach
         </div>
       </div>
-
-    <h1 class="mb-5">{{ $title }}</h1>
-
-    @foreach ( $posts->skip(1) as $post )
-    <article class="mb-5 border-bottom pb-4">
-        <h2>
-            <a href="/posts/{{ $post->slug }}" class="text-decoration-none">{{ $post->title }}</a>
-        </h2>
-            <p>By. <a class="text-decoration-none" href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a> in  <a href="/categories/{{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></p>
-
-        <p>{!! $post->excerpt !!}</p>
-
-        <a class="text-decoration-none" href="/posts/{{ $post->slug }}">Read more..</a>
-
-
-    </article>
-    @endforeach
 
 @endsection
 
