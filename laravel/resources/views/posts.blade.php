@@ -2,6 +2,23 @@
 
 @section('container')
 
+@if ($posts->count())
+
+    <div class="card mb-3">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">{{ $posts[0]->title }}</h3>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+
+@else
+
+      <p class="text-center fs-4">No post found.</p>
+
+@endif
+
     <h1 class="mb-5">{{ $title }}</h1>
 
     @foreach ( $posts as $post )
