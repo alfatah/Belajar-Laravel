@@ -5,6 +5,19 @@
 @if ($posts->count())
 
 <h1 class="mb-5">{{ $title }}</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form action="/posts">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search..." name="Search">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+              </div>
+        </form>
+    </div>
+</div>
+
+
     <div class="card mb-3">
         <img src="https://source.unsplash.com/random/1100x600/?{{ $posts[0]->category->name }}" class="card-img-top" alt="{{ $posts[0]->category->name }}">
         <div class="card-body text-center">
@@ -21,13 +34,6 @@
 
         </div>
       </div>
-
-@else
-
-      <p class="text-center fs-4">No post found.</p>
-
-@endif
-
 
       <div class="container">
         <div class="row">
@@ -53,6 +59,10 @@
         @endforeach
         </div>
       </div>
+
+        @else
+      <p class="text-center fs-4">No post found.</p>
+        @endif
 
 @endsection
 
