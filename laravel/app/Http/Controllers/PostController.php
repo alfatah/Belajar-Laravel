@@ -13,9 +13,8 @@ class PostController extends Controller
         $posts = Post::latest();
 
         if(request('search')) {
-            $posts->where('title', 'like', '%' . request('search') . '%');
+            $posts->where('title','like', '%' . request('search') . '%');
         }
-
 
         return view('posts', [
             "title" => "ALL Posts",
