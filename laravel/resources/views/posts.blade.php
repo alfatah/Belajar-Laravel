@@ -4,14 +4,14 @@
 
 @if ($posts->count())
 
-<h1 class="mb-5">{{ $title }}</h1>
+<h1 class="mb-3 text-center">{{ $title }}</h1>
 
-<div class="row">
+<div class="row justify-content-center mb-3">
     <div class="col-md-6">
         <form action="/posts">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Search..." name="Search">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                <input type="text" class="form-control" placeholder="Search..." name="Search" value="{{ request('search') }}">
+                <button class="btn btn-danger" type="submit" type="submit">Search</button>
               </div>
         </form>
     </div>
