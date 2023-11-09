@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Clockwork\Storage\Search;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,9 +14,9 @@ class Post extends Model
     protected $guarded = ['id'];
     protected $with = ['category', 'author'];
 
-    public function scopeFilter($query)
+    public function scopeFilter($query, array $filters)
     {
-        if(request('search')) {
+        if(isset($filters['search']) ? $filters['search']) {
          return $query->where('title','like', '%' . request('search') . '%')
                       ->orWhere('body', 'like', '%' . request('search') . '%');
         }
