@@ -16,10 +16,11 @@ class Post extends Model
 
     public function scopeFilter($query, array $filters)
     {
-        if(isset($filters['search']) ? $filters['search']) {
-         return $query->where('title','like', '%' . request('search') . '%')
-                      ->orWhere('body', 'like', '%' . request('search') . '%');
-        }
+        $query->when($filters['search'] ?? false, function($query, $search) {
+            return $query->where('title','like', '%' . $search['search'] . '%')
+            ->orWhere('body', 'like', '%' . $search['search'] . '%');
+        })
+
     }
 
 
