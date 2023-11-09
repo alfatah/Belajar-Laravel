@@ -27,6 +27,8 @@ class Post extends Model
             });
         });
 
+        
+
     }
 
 
