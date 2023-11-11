@@ -8,7 +8,7 @@
             <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
             <form>
               <div class="form-floating">
-                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com">
+                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" required>
                 <label for="email">Email address</label>
                 @error('email')
                 <div class="invalid-feedback">
@@ -17,7 +17,7 @@
                     @enderror
               </div>
               <div class="form-floating">
-                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password">
+                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password" required>
                 <label for="password">Password</label>
                 @error('password')
                 <div class="invalid-feedback">
