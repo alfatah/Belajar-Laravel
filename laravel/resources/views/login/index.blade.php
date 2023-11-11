@@ -16,15 +16,9 @@
                 <label for="floatingPassword">Password</label>
               </div>
 
-              <div class="form-check text-start my-3">
-                <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Remember me
-                </label>
-              </div>
-              <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
-              <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2023</p>
+              <button class="btn btn-primary w-100 py-2 mt-2" type="submit">Login</button>
             </form>
+            <small class="d-block text-center mt-3">Not Registered? <a href="/register">Reigister Now!</a></small>
           </main>
     </div>
 </div>

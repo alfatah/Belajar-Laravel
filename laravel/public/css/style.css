@@ -25,3 +25,8 @@
     border-bottom-left-radius: 0;
 }
 
+.form-registration input {
+    border-radius: 0;
+    border-radius: -1px;
+}
+
