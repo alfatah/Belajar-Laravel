@@ -1,14 +1,11 @@
 <?php
 
-
-use App\Models\Post;
-use App\Models\User;
 use App\Models\Category;
+use App\Models\User;
 
-use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------

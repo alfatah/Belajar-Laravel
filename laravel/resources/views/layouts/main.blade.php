@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     {{-- Bootstrap Icons --}}
 
+    <!-- Bootstrap My Style -->
+    <link rel="stylesheet" href="/css/style.css">
+    {{-- Bootstrap My Style --}}
+
+
+
   </head>
   <body>
 
