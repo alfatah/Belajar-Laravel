@@ -8,14 +8,23 @@
             <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
             <form>
               <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
+                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com">
+                <label for="email">Email address</label>
+                @error('email')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                    @enderror
               </div>
               <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Password</label>
+                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password">
+                <label for="password">Password</label>
+                @error('password')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+                    @enderror
               </div>
-
               <button class="btn btn-primary w-100 py-2 mt-2" type="submit">Login</button>
             </form>
             <small class="d-block text-center mt-3">Not Registered? <a href="/register">Reigister Now!</a></small>
