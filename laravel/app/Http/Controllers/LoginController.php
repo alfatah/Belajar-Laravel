@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 
 class LoginController extends Controller
@@ -13,5 +14,15 @@ class LoginController extends Controller
             'title' => 'Login',
             'active' => 'Login'
         ]);
+    }
+
+    public function authenticate(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email:dns',
+            'password' => 'required'
+        ]);
+
+        dd('berhasil login!');
     }
 }
