@@ -14,9 +14,10 @@
 
         <main class="form-signin w-100 m-auto">
             <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
-            <form>
+            <form class="/login" method="post">
+                @csrf
               <div class="form-floating">
-                <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" required value="{{ old('email') }}">
+                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" required value="{{ old('email') }} autofucus required">
                 <label for="email">Email address</label>
                 @error('email')
                 <div class="invalid-feedback">
@@ -25,7 +26,7 @@
                     @enderror
               </div>
               <div class="form-floating">
-                <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password" required>
+                <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Password" required>
                 <label for="password">Password</label>
                 @error('password')
                 <div class="invalid-feedback">
