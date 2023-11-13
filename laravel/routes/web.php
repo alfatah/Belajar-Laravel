@@ -68,10 +68,11 @@ Route::get('/authors/{author:username}', function(User $author) {
 
 });
 
-Route::get('/login', [loginController::class, 'index']);
+Route::get('/login', [loginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [loginController::class, 'authenticate']);
+Route::post('/logout', [loginController::class, 'logout']);
 
-Route::get('/register', [RegisterController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
