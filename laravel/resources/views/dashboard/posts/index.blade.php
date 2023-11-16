@@ -7,7 +7,7 @@
 
 
   <h2>Section title</h2>
-  <div class="table-responsive small">
+  <div class="table-responsive small col-lg-8">
     <table class="table table-striped table-sm">
       <thead>
         <tr>
@@ -20,11 +20,14 @@
       <tbody>
         @foreach ($posts as $post)
         <tr>
-            <td>1,001</td>
-            <td>random</td>
-            <td>data</td>
-            <td>placeholder</td>
-            <td>text</td>
+            <td>{{ $loop->iteration }}</td>
+            <td>{{ $post->title }}</td>
+            <td>{{ $post->category->name }}</td>
+            <td>
+                <a href="/dashboard/posts/{{ $post->slug }}" class="badge bg-info"><i class="bi bi-eye-fill"></i></a>
+                <a href="" class="badge bg-warning"><i class="bi bi-pencil-fill"></i></a>
+                <a href="" class="badge bg-danger"><i class="bi bi-x-circle-fill"></i></a>
+            </td>
           </tr>
         @endforeach
       </tbody>
