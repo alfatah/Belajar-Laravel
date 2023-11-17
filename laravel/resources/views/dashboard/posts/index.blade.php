@@ -6,14 +6,16 @@
   </div>
 
 
-  <h2>Section title</h2>
+
   <div class="table-responsive small col-lg-8">
+    <a href="/dashboard/posts/create" class="btn btn-primary mb-3">Create new post</a>
     <table class="table table-striped table-sm">
       <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Title</th>
           <th scope="col">Category</th>
+          <th scope="col">Create Date</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -23,6 +25,7 @@
             <td>{{ $loop->iteration }}</td>
             <td>{{ $post->title }}</td>
             <td>{{ $post->category->name }}</td>
+            <td>{{ $post->created_at }}</td>
             <td>
                 <a href="/dashboard/posts/{{ $post->slug }}" class="badge bg-info"><i class="bi bi-eye-fill"></i></a>
                 <a href="" class="badge bg-warning"><i class="bi bi-pencil-fill"></i></a>
