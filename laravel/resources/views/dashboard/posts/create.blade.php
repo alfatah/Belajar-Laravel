@@ -3,6 +3,17 @@
 
 @section('container')
 
+  <!-- Trix Editor -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css">
+    <script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
+  <!-- Trix Editor -->
+
+    <style>
+        trix-toolbar [data-trix-button-group="file-tools"] {
+            display: none;
+        }
+     </style>
+     
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Create new post</h1>
   </div>
@@ -51,6 +62,11 @@
         .then(response => response.json())
         .then(data => slug.value = data.slug)
     });
+
+
+    document.addEventListener('trix-file-accept', function(e) {
+        e.preventDefault()
+    })
 </script>
 
 
