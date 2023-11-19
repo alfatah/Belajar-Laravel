@@ -1,6 +1,8 @@
 @extends('dashboard.layouts.main')
 
+
 @section('container')
+
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h2">Create new post</h1>
   </div>
@@ -28,7 +30,11 @@
       </select>
   </div>
 
-
+  <div class="mb-3">
+    <label for="body" class="form-label">Body</label>
+    <input id="body" type="hidden" name="body">
+    <trix-editor input="body"></trix-editor>
+  </div>
 
 
   <button type="submit" class="btn btn-primary">Create Post</button>

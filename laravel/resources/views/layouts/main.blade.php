@@ -19,7 +19,10 @@
     <link rel="stylesheet" href="/css/style.css">
     {{-- Bootstrap My Style --}}
 
-
+     <!-- Trix Editor -->
+    <link rel="stylesheet" type="text/css" href="/css/trix.css">
+    <script type="text/javascript" src="/js/trix.umd.min.js"></script>
+     {{-- Trix Editor --}}
 
   </head>
   <body>
