@@ -19,12 +19,13 @@
   </div>
 
   <div class="col-lg-8">
-<form method="post" action="/dashboard/posts" class="mb-5">
+<form method="post" action="/dashboard/posts/{{ $post->slug }}" class="mb-5">
+    @method('put')
     @csrf
 
   <div class="mb-3">
     <label for="title" class="form-label">Title</label>
-    <input type="text" class="form-control @error('title') is-invalid @enderror"  id="title" name="title" required autofocus value="{{ old('title') }}">
+    <input type="text" class="form-control @error('title') is-invalid @enderror"  id="title" name="title" required autofocus value="{{ old('title', $post->title) }}">
     @error('title')
     <div class="invalid-feedback">
         {{ $message }}
@@ -34,7 +35,7 @@
 
   <div class="mb-3">
     <label for="slug" class="form-label">Slug</label>
-    <input type="text" class="form-control  @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug') }}">
+    <input type="text" class="form-control  @error('slug') is-invalid @enderror" id="slug" name="slug" required value="{{ old('slug', $post->slug) }}">
     @error('slug')
     <div class="invalid-feedback">
         {{ $message }}
@@ -60,12 +61,13 @@
     @error('body')
     <p class="text-danger">{{ $message }}</p>
     @enderror
-    <input id="body" type="hidden" name="body" value="{{ old('body') }}">
+    <input id="body" type="hidden" name="body" value="{{ old('body', $post->body) }}">
     <trix-editor input="body"></trix-editor>
   </div>
 
 
-  <button type="submit" class="btn btn-primary">Create Post</button>
+  <button type="submit" class="btn btn-primary">Update Post</button>
+
 
 </form>
 </div>
