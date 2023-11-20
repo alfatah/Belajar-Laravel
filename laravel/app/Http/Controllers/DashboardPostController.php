@@ -86,6 +86,7 @@ class DashboardPostController extends Controller
         $rules = [
             'title' => 'required|max:255',
             'category_id' => 'required',
+
             'body' => 'required'
         ];
 
@@ -94,6 +95,15 @@ class DashboardPostController extends Controller
         }
 
         $validateData = $request->validate($rules);
+
+        $validateData['user_id'] = auth()->user()->id;
+        $validateData['excerpt'] = Str::limit(strip_tags($request->body), 200);
+
+
+        Post::where('id', $post->id)
+                ->update($validateData);
+
+        return redirect('/dashboard/posts')->with('success', 'Post has been Updated!');
     }
 
     /**
