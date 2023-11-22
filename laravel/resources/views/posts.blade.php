@@ -2,8 +2,6 @@
 
 @section('container')
 
-@if ($posts->count())
-
 <h1 class="mb-3 text-center">{{ $title }}</h1>
 
 <div class="row justify-content-center mb-3">
@@ -26,7 +24,7 @@
     </div>
 </div>
 
-
+@if ($posts->count())
     <div class="card mb-3">
         <img src="https://source.unsplash.com/random/1100x600/?{{ $posts[0]->category->name }}" class="card-img-top" alt="{{ $posts[0]->category->name }}">
         <div class="card-body text-center">
@@ -47,7 +45,6 @@
       <div class="container">
         <div class="row">
             @foreach($posts->skip(1) as $post)
-
 
          <div class="col-md-4 mb-3">
             <div class="card">
