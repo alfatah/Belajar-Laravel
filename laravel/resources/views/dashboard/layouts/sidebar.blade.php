@@ -23,6 +23,19 @@
               <div class="col-8">
                   <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
                     <div id="item-1">
+
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                            <span>Administrator</span>
+                        </h6>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link d-flex {{ Request::is('dashboard/categories') ? 'active' : 'text-black' }}" href="/dashboard/categories">
+                                    <i class="bi bi-grid-fill"></i>
+                                    Post Categories
+                                  </a>
+                            </li>
+                        </ul>
+
                     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                     </div>
                   </div>

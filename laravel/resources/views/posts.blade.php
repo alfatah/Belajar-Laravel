@@ -36,7 +36,7 @@
 
 
         <div class="card-body text-center">
-          <h3 class="card-title"><a href="/posts/{{ $posts[0]->title }}" class="text-decoration-none text-dark">{{ $posts[0]->title }}</a></h3>
+          <h3 class="card-title"><a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none text-dark">{{ $posts[0]->title }}</a></h3>
 
           <small class="text-muted">
           By. <a class="text-decoration-none" href="/posts?author={{ $posts[0]->author->username }}">{{ $posts[0]->author->name }}</a> in  <a href="/posts?category={{ $posts[0]->category->slug }}" class="text-decoration-none">{{ $posts[0]->category->name }}</a>
