@@ -24,6 +24,7 @@
                   <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
                     <div id="item-1">
 
+                        @can('admin')
                         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                             <span>Administrator</span>
                         </h6>
@@ -35,6 +36,7 @@
                                   </a>
                             </li>
                         </ul>
+                        @endcan
 
                     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                     </div>
