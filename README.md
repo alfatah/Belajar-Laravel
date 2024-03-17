@@ -11,6 +11,7 @@ Karena fleksibilitas, dokumentasi yang kaya, serta komunitas yang aktif dan luas
  Link Video Tutorial : [Video](https://www.youtube.com/playlist?list=PLFIM0718LjIWiihbBIq-SWPU6b6x21Q_2)
 
  <br>
-Installation Laravel : [https://laravel.com/docs/10.x/installation](https://laravel.com/docs/10.x/installation)https://laravel.com/docs/10.x/installation
+Installation Laravel : <svg class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82
+
 
 
