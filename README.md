@@ -11,6 +11,6 @@ Karena fleksibilitas, dokumentasi yang kaya, serta komunitas yang aktif dan luas
  Link Video Tutorial : [Video](https://www.youtube.com/playlist?list=PLFIM0718LjIWiihbBIq-SWPU6b6x21Q_2)
 
  <br>
-Installation Laravel : [Link][https://laravel.com/docs/10.x/installation]
+Installation Laravel : [https://laravel.com/docs/10.x/installation](https://laravel.com/docs/10.x/installation)https://laravel.com/docs/10.x/installation
 
 
